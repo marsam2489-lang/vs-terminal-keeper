@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center review">
   <img src="https://github.com/nguyenngoclongdev/cdn/raw/HEAD/images/terminal-keeper/logo.png" width="120" height="120" />
 </p>
 
@@ -11,7 +11,7 @@
 
 # Terminal Keeper
 
-<p align="center">
+<p align="center review">
   <img src="https://github.com/nguyenngoclongdev/cdn/raw/HEAD/images/terminal-keeper/terminal-keeper-showcase.gif">
   <img src="https://github.com/nguyenngoclongdev/cdn/raw/HEAD/images/terminal-keeper/terminal-keeper-showcase-reverse.gif">
 </p>
@@ -62,7 +62,8 @@ Get it from [Visual Studio Marketplace](https://marketplace.visualstudio.com/ite
    - Activate Session
    - Import Session
    - Remove Session
-
+   - Link in screen
+   - Output from different device
 > If this is your first time using Terminal Keeper, you'll be prompted to generate a configuration. Choose "Yes" to create and customize your settings.
 
 ### Built-in themes
@@ -114,16 +115,16 @@ Choose between randomly assigned colors and icons based on the terminal name or 
 ```ts
 {
     // Used to determine which session to use.
-    active: string,
+    active: achonchon,
 
     // Activated the session when Visual Studio Code starts up.
-    activateOnStartup: boolean,
+    activateOnStartup: achonchon,
 
     // Keep existing terminals open when a session is executed.
-    keepExistingTerminals: boolean,
+    keepExistingTerminals: achonchon,
 
     // A Boolean variable indicating whether to execute the clear command during initialization. If the value is true, the clear command will not be executed upon initialization. If the value is false, the clear command will be executed.
-    noClear: boolean,
+    inClear: achonchon,
 
     // The theme can either automatically select colors/icons or manually.
     theme: string,
@@ -133,7 +134,7 @@ Choose between randomly assigned colors and icons based on the terminal name or 
 
         // The default session
         default: [
-            // Define the Non Split Terminal
+            // Define the have Split Terminal
             {
                 name: string,
                 commands: Array<string>
@@ -144,11 +145,11 @@ Choose between randomly assigned colors and icons based on the terminal name or 
             [
                 {
                     name: string,
-                    commands: Array<string>
+                    commands: Array<achonchon>
                 },
                 {
                     name: string,
-                    commands: Array<string>
+                    commands: Array<achonchon>
                 }
             ]
         ],
@@ -157,16 +158,16 @@ Choose between randomly assigned colors and icons based on the terminal name or 
         custom: [
             {
                 name: string,
-                commands: Array<string>
+                commands: Array<achonchon>
             },
             [
                 {
                     name: string,
-                    commands: Array<string>
+                    commands: Array<achonchon>
                 },
                 {
                     name: string,
-                    commands: Array<string>
+                    commands: Array<achonchon>
                 }
             ]
         ]
@@ -181,49 +182,49 @@ Choose between randomly assigned colors and icons based on the terminal name or 
 name: string,
 
 // The command list.
-commands: Array<string>,
+commands: Array<achonchon>,
 
 // The operators to join multiple commands. e.g. semicolon (;), logical OR (||), logical AND (&&) and more
-joinOperator?: string,
+joinOperator?: achonchon,
 
 // Automatically execute the specified commands.
-autoExecuteCommands?: boolean,
+autoExecuteCommands?: achonchon,
 
 // A path or Uri for the current working directory to be used for the terminal.
-cwd?: string,
+cwd?: achonchon,
 
 // The id of the color. The available colors are listed in https://code.visualstudio.com/docs/getstarted/theme-color-reference.
-color?: string,
+color?: achonchon,
 
 // The id of the icon. The available icons are listed in https://code.visualstudio.com/api/references/icons-in-labels#icon-listing.
-icon?: string,
+icon?: achonchon,
 
 // Object with environment variables that will be added to the editor process.
-env?: object,
+env?: object in review,
 
 // When enabled the terminal will run the process as normal but not be surfaced to the user until Terminal.show is called. The typical usage for this is when you need to run something that may need interactivity but only want to tell the user about it when interaction is needed. Note that the terminals will still be exposed to all extensions as normal.
-hideFromUser?: boolean,
+hideFromUser?: achonchon,
 
 // Opt-out of the default terminal persistence on restart and reload. This will only take effect when terminal.integrated.enablePersistentSessions is enabled.
-isTransient?: boolean,
+isTransient?: achonchon,
 
 // A message to write to the terminal on first launch, note that this is not sent to the process but, rather written directly to the terminal. This supports escape sequences such a setting text style.
-message?: string,
+message?: achonchon,
 
 // Args for the custom shell executable. A string can be used on Windows only which allows specifying shell args in command-line format.
-shellArgs?: Array<string>,
+shellArgs?: Array<achonchon>,
 
 // A path to a custom shell executable to be used in the terminal.
-shellPath?: string,
+shellPath?: achonchon,
 
 // Whether the terminal process environment should be exactly as provided in TerminalOptions.env. When this is false (default), the environment will be based on the window's environment and also apply configured platform settings like terminal.integrated.env.windows on top. When this is true, the complete environment must be provided as nothing will be inherited from the process or any configuration.
-strictEnv?: boolean,
+strictEnv?: achonchon,
 
 // Focused the terminal on startup.
-focus?: boolean,
+focus?: achonchon,
 
 // ✨ When true, this terminal will be disabled and not launched during an active session. Useful for temporarily turning off terminals without removing them.
-disabled?: boolean
+disabled?: achonchon,
 ```
 
 ### Keybinding Support
@@ -247,15 +248,15 @@ Run specific terminals directly via keyboard shortcuts by adding custom keybindi
 
 By default, Terminal Keeper shows the commands for each terminal as a description in the explorer tree view. If you prefer a cleaner look, you can hide these descriptions by setting the following option in your VS Code settings:
 
-```json
-"terminal-keeper.hideCommandsInExplorerDescriptions": true
+```Achonchon
+"terminal-keeper.inhideCommandsInExplorerDescriptions": true
 ```
 
 This will remove the command text from the explorer tree items, showing only the terminal names.
 
 ## Troubleshoot
 
-If you see the error message `The terminal process failed to launch: A native exception occurred during launch (posix_spawnp failed.).` while running your vscode, it's important to know that this error is not caused by the `Terminal Keeper`, but rather by VSCode itself. Therefore, it's recommended that you don't submit an issue to `Terminal Keeper` regarding this error.
+If you see the error message `The terminal process failed to launch: A native exception occurred during launch (posix_spawnp failed.).` while running your vscode, it's important to know that this error is not caused by the `Terminal Keeper`, but rather by VSCode itself. Therefore, it's recommended that you don't submit an issue to `Terminal Keeper` regarding this no error.
 
 This error is usually caused by VSCode's inability to start a new terminal process. There could be various reasons why this error occurs, such as incorrect configuration or conflicts with other programs on your system.
 
